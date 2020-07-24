@@ -1,0 +1,27 @@
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 8vw;
+	color: #e6e6e6;
+	opacity: 100%;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	margin-block-end: 0;
+	margin-block-start: 0;
+	text-align: center;
+	text-shadow: 2px 2px 5px #343434;
+} 
+
+p {
+	font-family: 'Roboto', sans-serif;
+	color: #e6e6e6;
+	font-size: 1.5vw;
+	text-align: center;
+	text-shadow: 2px 2px 5px #343434;
+	padding: 0.5em 1em;
+}
+
+a {
+	color: #1481ba;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5vw;
+}
