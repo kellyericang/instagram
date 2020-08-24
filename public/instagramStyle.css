@@ -5,3 +5,7 @@ body {
 h2 {
 	font-family: 'Roboto', sans-serif;
 }
+
+.root {
+	width: 100%;
+}

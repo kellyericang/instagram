@@ -5,28 +5,19 @@ html {
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
+	width: 100%;
 }
 
 img {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	max-width: 90%;
 	max-height: 90%;
-	align-self: center;
+	cursor: pointer;
+	object-fit: contain;
 }
 
-img:hover{
-	opacity: 75%;
-}
-
-a {
-	justify-content: center;
-	align-content: center;
-}
-
-button {
-	max-height: 25px;
+.pics < img:hover{
+	opacity: 85%;
 }
 
 .container {
@@ -35,17 +26,27 @@ button {
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-content: center;
+	width: 100%;
+}
+
+.gallery {
+	display: flex;
+	background: #292929CC;
+	width: 95%;
+	align-self: center;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .pics {
 	display: grid;
-	width: 95%;
+	width: 90%;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
-	grid-gap: 6px;
-	align-self: center;
+	grid-template-columns: 45% 45%;
+	grid-template-rows: 45% 45%;
+	grid-gap: 10px;
 }
 
 .pic {
@@ -53,13 +54,87 @@ button {
 	align-content: center;
 }
 
-.buttons {
-	display: flex;
-	justify-content: space-around;
-	padding-top: 20px;
-
+/*page indicators*/
+[id*="dot-"] {
+	height: 15px;
+	width: 15px;
+	background-color: #e6e6e650;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 1px;
 }
 
+#dot-0 {
+	background-color: #e6e6e6A0;
+}
+
+#dots {
+	grid-column-start: span 2;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*arrows*/
+.arrow {
+	position: static;
+	z-index: 1;
+	cursor: pointer;
+	color: #e6e6e6A0;
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*modal stuff*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	overflow: auto;
+	background-color: #292929DC;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modalImage {
+	flex-grow: 1;
+	max-width: 85%;
+	max-height: 90vh;
+	margin: auto;
+}
+
+.closeButton {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+@keyframes zoom {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+/*responsive stuff*/
 @media only screen and (min-width: 600px) {
 
 }

@@ -14,7 +14,7 @@ h2 {
 p {
 	font-family: 'Roboto', sans-serif;
 	color: #e6e6e6;
-	font-size: 1.5vw;
+	font-size: 24px;
 	text-align: center;
 	text-shadow: 2px 2px 5px #343434;
 	padding: 0.5em 1em;
@@ -23,5 +23,5 @@ p {
 a {
 	color: #1481ba;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5vw;
+	font-size: 24px;
 }
