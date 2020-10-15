@@ -24,6 +24,7 @@ header a:hover {
 	background-color: #e6e6e6;
 	color: #343434;
 	height: 100%;
+	pointer-events: none;
 }
 
 #current:hover {

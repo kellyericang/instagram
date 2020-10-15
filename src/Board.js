@@ -6,8 +6,6 @@ function Board() {
 	const [page, setPage] = useState(0);
 	const [permalinks, setPermalinks] = useState({ links: [] });
 	const [mediaUrls, setMediaUrls] = useState({ urls: [] });
-	// const [x, setX] = useState();
-	// const [initX, setInitX] = useState();
 	const [currentImage, setCurrentImage] = useState();
 	const [modalOpen, setModalOpen] = useState(false);
 
@@ -47,7 +45,6 @@ function Board() {
 	}, [modalOpen]);
 
 
-
 	// update dots when the current page changes 
 	useEffect(() => {
 		for (var i = maxPage; i >= 0; i--) {
@@ -73,15 +70,20 @@ function Board() {
 			<p className="intro">Here are some of the crafts that I have made and posted on my Instagram, you can follow me at <a href="https://www.instagram.com/kellycraftng/">@kellycraftng</a> if you want to stay updated! I like to dabble in a number of different crafts but specialize in papercutting and card-making. I'm open for commissions via DM on Instagram!</p>
 			<div id="modal-div" className="modal">
 					<span className="closeButton" onClick={() => setModalOpen(false)}>&times;</span>
-					{ currentImage > 0 && 
-						<span className="arrow left" id="prevModalButton" onClick={() => setCurrentImage(currentImage-1)}>&larr;</span> 
-					}
+					<span className="arrow left" 
+						style={currentImage==0 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
+						id="prevModalButton" 
+						onClick={() => setCurrentImage(currentImage-1)}>
+					&larr;</span> 
+
 					<a id="modal-url" href={permalinks[currentImage]}>
 						<img className="modalImage" id="modal-image" alt=""></img>
 					</a>
-					{ currentImage < permalinks.length-1 &&
-						<span className="arrow right" id="nextModalButton" onClick={() => setCurrentImage(currentImage+1)}>&rarr;</span>
-					}
+
+					<span className="arrow right" 
+						style={currentImage==permalinks.length-1 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
+						id="nextModalButton" onClick={() => setCurrentImage(currentImage+1)}>
+					&rarr;</span>
 			</div>	
 			<div className="gallery">
 				{ page !== 0 && 
