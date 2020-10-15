@@ -71,7 +71,7 @@ function Board() {
 			<div id="modal-div" className="modal">
 					<span className="closeButton" onClick={() => setModalOpen(false)}>&times;</span>
 					<span className="arrow left" 
-						style={currentImage==0 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
+						style={currentImage===0 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
 						id="prevModalButton" 
 						onClick={() => setCurrentImage(currentImage-1)}>
 					&larr;</span> 
@@ -81,7 +81,7 @@ function Board() {
 					</a>
 
 					<span className="arrow right" 
-						style={currentImage==permalinks.length-1 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
+						style={currentImage===permalinks.length-1 ? {opacity: "0%", pointerEvents: "none"}:{opacity: "100%"}} 
 						id="nextModalButton" onClick={() => setCurrentImage(currentImage+1)}>
 					&rarr;</span>
 			</div>	
