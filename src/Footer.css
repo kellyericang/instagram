@@ -1,0 +1,16 @@
+.footerText {
+	font-size: 1em;
+}
+
+.icons {
+	display: flex;
+	justify-content: center;
+}
+
+img {
+	padding: 7px;
+}
+
+img:hover {
+	opacity: 80%;
+}

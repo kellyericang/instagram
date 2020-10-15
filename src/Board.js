@@ -6,8 +6,8 @@ function Board() {
 	const [page, setPage] = useState(0);
 	const [permalinks, setPermalinks] = useState({ links: [] });
 	const [mediaUrls, setMediaUrls] = useState({ urls: [] });
-	const [x, setX] = useState();
-	const [initX, setInitX] = useState();
+	// const [x, setX] = useState();
+	// const [initX, setInitX] = useState();
 	const [currentImage, setCurrentImage] = useState();
 	const [modalOpen, setModalOpen] = useState(false);
 
@@ -29,7 +29,7 @@ function Board() {
 
 	}, []);
 
-	const maxPage = Math.floor(permalinks.length/4);
+	const maxPage = Math.floor(permalinks.length/4)-1;
 
 	// adds the dots for the gallery to indicate pages 
 	useEffect(() => {
@@ -70,7 +70,7 @@ function Board() {
 	return (
 		<div className="container">
 			<h2 className="heading">Instagram</h2>
-			<p>Here are some of the crafts that I have made and posted on my Instagram, you can follow me at <a href="https://www.instagram.com/kellycraftng/">@kellycraftng</a> if you want to stay updated! I like to dabble in a number of different crafts but specialize in papercutting and card-making. I'm open for commissions via DM on Instagram!</p>
+			<p className="intro">Here are some of the crafts that I have made and posted on my Instagram, you can follow me at <a href="https://www.instagram.com/kellycraftng/">@kellycraftng</a> if you want to stay updated! I like to dabble in a number of different crafts but specialize in papercutting and card-making. I'm open for commissions via DM on Instagram!</p>
 			<div id="modal-div" className="modal">
 					<span className="closeButton" onClick={() => setModalOpen(false)}>&times;</span>
 					{ currentImage > 0 && 
@@ -92,17 +92,14 @@ function Board() {
 					<img className="pic" src={mediaUrls[page*4+1]} alt="" onClick={() => openModal(page*4+1)}/>
 					<img className="pic" src={mediaUrls[page*4+2]} alt="" onClick={() => openModal(page*4+2)}/>
 					<img className="pic" src={mediaUrls[page*4+3]} alt="" onClick={() => openModal(page*4+3)}/>
-					<div id="dots">
-						<span id="dot-0"></span>
-					</div>
 				</div>
-					
 				{ page !== maxPage &&
 					<span className="arrow right" id="nextButton" onClick={() => setPage(page + 1)}>&rarr;</span>
 				}	
+				<div id="dots">
+						<span id="dot-0"></span>
+				</div>
 			</div>
-			x: {x}
-			initX: {initX}
 		</div>
 	)
 }

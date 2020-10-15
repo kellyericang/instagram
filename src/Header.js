@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import './Header.css';
 
-class Header extends Component {
-	render() {
-		return (
-			<div>
-				<h1 className="container-fluid">menu</h1>
-			</div>
-		)
-	}
+function Header() {
+
+	return (
+		<header className="header">
+			<a href="https://kellyericang.github.io/">Home</a>
+			<a id="current" href="https://kellyericang.github.io/instagram/">Instagram</a>
+			<a href="https://kellyericang.github.io/slotmachine/">Doggo Slot Machine</a>
+			<a href="https://kellyericang.github.io/jeopardy">Jeopardy</a>
+		</header>
+		
+	)
 }
 
 export default Header;
