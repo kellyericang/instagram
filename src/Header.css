@@ -12,19 +12,21 @@ header a {
 	text-decoration: none;
 	color: #e6e6e6;
 	height: 100%;
-	
 }
 
 header a:hover {
-	opacity: 85%;
 	background-color: #e6e6e6;
 	color: #343434;
 	height: 100%;
 }
 
 #current {
-	opacity: 85%;
 	background-color: #e6e6e6;
 	color: #343434;
 	height: 100%;
+}
+
+#current:hover {
+	background-color: #8e7c93ee;
+	color: #e6e6e6;
 }

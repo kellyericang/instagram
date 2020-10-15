@@ -16,10 +16,6 @@ img {
 	object-fit: contain;
 }
 
-.pics < img:hover{
-	opacity: 85%;
-}
-
 .container {
 	display: flex;
 	flex-direction: column;
@@ -127,15 +123,4 @@ img {
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
-}
-
-
-@keyframes zoom {
-	from {transform: scale(0)}
-	to {transform: scale(1)}
-}
-
-/*responsive stuff*/
-@media only screen and (min-width: 600px) {
-
 }
