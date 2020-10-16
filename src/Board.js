@@ -67,7 +67,7 @@ function Board() {
 	return (
 		<div className="container">
 			<h2 className="heading">Instagram</h2>
-			<p className="intro">Here are some of the crafts that I have made and posted on my Instagram, you can follow me at <a href="https://www.instagram.com/kellycraftng/">@kellycraftng</a> if you want to stay updated! I like to dabble in a number of different crafts but specialize in papercutting and card-making. I'm open for commissions via DM on Instagram!</p>
+			<p className="intro">Here are some of the crafts that I have made and posted on my Instagram, you can follow me at <a href="https://www.instagram.com/kellycraftng/">@kellycraftng</a> if you want to stay updated! I like to dabble in a number of different crafts but specialize in papercutting and card-making. I'm available for commissions via DM on Instagram!</p>
 			<div id="modal-div" className="modal">
 					<span className="closeButton" onClick={() => setModalOpen(false)}>&times;</span>
 					<span className="arrow left" 
